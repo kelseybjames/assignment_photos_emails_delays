@@ -63,10 +63,10 @@ class UsersController < ApplicationController
 
   def serve
     @user = User.find(params[:user_id])
-    @photo = @user.profile_photo_data
-    send_data(@photo, type: @user.profile_photo_mime_type, 
-                      filename: @user.profile_photo_filename, 
-                      disposition: 'inline')
+    # @photo = @user.profile_photo_data
+    # send_data(@photo, type: @user.profile_photo_mime_type,
+    #                   filename: @user.profile_photo_filename,
+    #                   disposition: 'inline')
   end
 
   private
